@@ -4,6 +4,17 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <style>
+      body{
+        height: 100vh;
+        background-image: url('wallpaper.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .funcName {
+        color: white;
+        font-weight: bold;
+        font-size: 40px;
+      }
       .container {
         width: 100%;
         max-width: 1200px;
@@ -21,20 +32,20 @@
     </style>
   </head>
   <body>
-    <div id="root">
-      <h1>문자열 치환 함수 만들기</h1>
+    <div id="root" style="text-align: center;">
+      <h1 class="funcName">문자열 치환 함수</h1>
       <div class="container">
-        <textarea name="text" id="text" class="text" cols="30" rows="10">
-안녕하세요 아무 문자열이나 적어봤습니다. 여러분 독서를 좋아하시나요? 독서는 마음의 양식입니다. 오늘의 내 한걸음은 보잘것 없지만, 지식의 한걸음은 걸을수록 그 보폭이 넓어져 세상을 이롭게 만들수 있을것입니다.</textarea
-        >
+        <textarea name="text" id="text" class="text" cols="30" rows="10" placeholder="원본 문자열을 입력하세요."></textarea>
       </div>
       <div class="container">
-        타겟 단어: <input id="target-word" type="text" /> 바꿀 단어:
+        원본 단어: <input id="target-word" type="text" /> 변경된 단어:
         <input id="changed-word" type="text" />
         <button id="submit" type="submit">실행</button>
+        <button id="clear" type="clear">초기화</button>
+        <button id="clipboard" type="clipboard">결과 클립보드 복사</button>
         <hr />
         <h2>
-          결과는 아래에 나와요~
+          Result
           <p id="word-ctn"></p>
         </h2>
         <textarea
